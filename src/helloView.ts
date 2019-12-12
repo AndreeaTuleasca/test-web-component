@@ -2,10 +2,6 @@ import { css, customElement, html, LitElement, property } from 'lit-element';
 
 @customElement('hello-view')
 class HelloView extends LitElement {
-  static get observedAttributes() {
-    return ['value'];
-  }
-
   static get styles() {
     return css`
       #root {
@@ -26,7 +22,7 @@ class HelloView extends LitElement {
     `;
   }
 
-  private handleClick = () => {
+  private handleClick() {
     this.dispatchEvent(new CustomEvent('increment'));
-  };
+  }
 }
